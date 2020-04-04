@@ -1,6 +1,13 @@
 #ifndef __STRUCTS__
 	#define __STRUCTS__
 	
+	typedef struct _person
+	{
+		char name[NAMESIZE];
+		char surname[SURNAMESIZE];
+		char email[EMAILSIZE];
+		unsigned long int reg;		
+	}PERSON;
 
 	typedef struct _student
 	{
@@ -46,6 +53,7 @@
 		unsigned short int year;
 		unsigned short int semester;		
 		unsigned short int theoryProfessor;
+		unsigned short int onlyTheoretical;
 		unsigned short int practiceProfessor;
 		unsigned short int classSize;
 	}DISCIPLINE;
