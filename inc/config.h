@@ -22,8 +22,13 @@
 		#define STRING 0
 		#define CHANGED 1
 		#define DONTCHANGED 0
+		/*crud control*/
+		#define COURSEDB "bd/courses.dat"
+		#define COURSETYPE 1
 		/*generic controls*/
 		#define EXIT 0
+		#define SUCCESS 1
+		#define FAILURE 0
 	
 	/*Menu options*/
 		/*administrative menu*/
@@ -33,7 +38,7 @@
 			#define UPDATESTUDENT 0
 			#define DELETESTUDENT 0
 			/*manage courses*/
-			#define CREATECOURSE 0
+			#define CREATECOURSE 22
 			#define READCOURSE 0
 			#define UPDATECOURSE 0
 			#define DELETECOURSE 0
@@ -56,7 +61,7 @@
 	
 	#include "structs.h"
 		
-	/*environment variables - GLOBAL*/
+	/*global variables*/
 	int ORDINATION_METHOD;
 	int SEARCH_METHOD;
 	DEGREE *LIST_OF_DEGREES;

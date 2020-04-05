@@ -39,11 +39,10 @@ DEGREE registerDegree()
 	return degree;
 }
 
-COURSE registerCourse()
-{
-	COURSE course;
-	
-	getString("Nome do Curso: ", COURSENAMESIZE, course.courseName);
+COURSE * registerCourse(COURSE * course)
+{	
+	getString("Nome do Curso: ", COURSENAMESIZE, course->courseName);
+	course->durationYears = getShortInteger("Duração do Curso: ");	
 	//falta gerar id
 	
 	return course;

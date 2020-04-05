@@ -5,7 +5,7 @@
 	STUDENT registerStudent();
 	PROFESSOR registerProfessor();
 	DEGREE registerDegree();
-	COURSE registerCourse();
+	COURSE * registerCourse(COURSE * course);
 	DISCIPLINE registerDiscipline();
 	static PERSON getPerson();
 #endif

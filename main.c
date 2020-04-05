@@ -8,9 +8,9 @@ int main(void) {
 	{"Nuno Souza","Gambão","nunogamba@ipvc.pt",123},
 	{"Fernando Brazão", "Luza","fernandobr@ipvc.pt",945}};
 	
-	int choice=CREATESTUDENT;
+	int choice=CREATECOURSE;
 	STUDENT temporaryStudent;
-
+	COURSE temporaryCourse,temporaryCourse2;
 	setlocale(LC_ALL,"portuguese");
 
 	do
@@ -20,13 +20,19 @@ int main(void) {
 		{
 			case CREATESTUDENT:
 				temporaryStudent = registerStudent();				
-				choice =0; //delete
+				break;
+			case CREATECOURSE:
+				 registerCourse(&temporaryCourse);
+				 printf("[1]\nCurso: %s \nDuração: %d\n",temporaryCourse.courseName,temporaryCourse.durationYears);
+				 createData(&temporaryCourse,COURSETYPE);
+				 readData(&temporaryCourse2,COURSETYPE);
+				 printf("[2]\nCurso: %s \nDuração: %d\n",temporaryCourse2.courseName,temporaryCourse2.durationYears);
 				break;
 		}
-		
+		choice =0; //delete
 	}while(choice != EXIT);
 	
-	printf("\n Nome: %s Sobrenome: %s \n Email: %s  Matricula: %d \n ANO de Ingresso: %d\n\n",temporaryStudent.name,temporaryStudent.surname,temporaryStudent.email,temporaryStudent.reg,temporaryStudent.startYear);
+	
 	
 	system("pause");
 	return 0;
