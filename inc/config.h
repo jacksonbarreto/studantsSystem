@@ -6,6 +6,8 @@
 	#include <locale.h>
 	#include <string.h>
 	
+
+	
 	/*Size settings*/
 	#define NAMESIZE 50
 	#define SURNAMESIZE 50
@@ -89,4 +91,8 @@
 	#include "search.h"
 	#include "boot.h"
 	#include "workspace.h"
+#endif
+
+#ifdef _WIN32
+	#include <windows.h>
 #endif

@@ -42,8 +42,7 @@ DEGREE registerDegree()
 COURSE * registerCourse(COURSE * course)
 {	
 	getString("Nome do Curso: ", COURSENAMESIZE, course->courseName);
-	course->durationYears = getShortInteger("Duração do Curso: ");
-	printf("[1] - Variável 1 acessada de dentro função : Fica SEM acentuação \nCurso: %s \nDuração: %d\n",course->courseName,course->durationYears);	
+	course->durationYears = getShortInteger("Duração do Curso: ");	
 	//falta gerar id
 	
 	return course;
