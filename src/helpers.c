@@ -18,7 +18,7 @@ unsigned short int getShortInteger(const char *question)
 	
 	printf(question);
 	scanf(" %hu",&integer);
-	
+	clearBuffer();
 	return integer;
 }
 
